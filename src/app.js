@@ -9,7 +9,6 @@ const app = express()
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
-// console.log(viewsPath)
 
 app.set('view engine', 'hbs')
 app.use(express.static(publicDirectoryPath))
@@ -71,7 +70,7 @@ app.get('/weather', (req, res) => {
                 if (forecastData) {
                     const forecast = forecastData.current.weather_descriptions[0]
                     const rainIndex = forecastData.current.precip
-                    // console.log(forecastData)
+
                     res.send([{
                         forecast: forecast,
                         location: loc,
@@ -83,50 +82,11 @@ app.get('/weather', (req, res) => {
     })
 })
 
-app.get('/products', (req, res) => {
-    if (!req.query.city) {
-        return res.send('Error: Enter a city name')
-    }
-
-    res.send([{
-        products: []
-    }])
-})
-
 app.get('*', (req, res) => {
     res.render('404', {
         error: 'Page not found'
     })
 })
-
-
-/* app.get('', (req, res) => {
-    res.send('<h1>Hello, Welcome to Express Tutorials</h1>')
-}) */
-
-/*
-app.get('/help', (req, res) => {
-    res.send([{
-        name: 'Help',
-        data: 'No Data Available'
-    }, {
-        name: 'Help 1',
-        data: 'No Data Available 1',
-        describe: 'Data is Being Added'
-    }])
-}) */
-
-/* app.get('/about', (req, res) => {
-    res.send('<h2>About Page</h2>')
-}) */
-
-/* app.get('/weather', (req, res) => {
-    res.send([{
-        place: 'Bangalore',
-        temperature: 30,
-        weather: 'cloudy'
-    }])
-}) */
 
 app.listen(3000, () => {
     console.log('server started at port 3000')
