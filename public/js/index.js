@@ -19,7 +19,7 @@ searchBtn.addEventListener('submit', (e) => {
     if (!location) {
         messageOne.textContent = 'Enter a valid city name'
     } else {
-        fetch('http://localhost:3000/weather?address=' + location).then((res) => res.json().then((data) => {
+        fetch('/weather?address=' + location).then((res) => res.json().then((data) => {
             if (data.error) {
                 messageOne.textContent = data.error
             } else {
