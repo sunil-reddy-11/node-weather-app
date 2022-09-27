@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-height: 120vh;
+    margin: 20px auto;
+}
+
+a {
+    text-decoration: none;
+    margin-right: 20px;
+    color: #888888;
+    font-size: 20px;
+}
+
+h1{
+    color: rgb(86, 40, 211);
+    margin: 30px auto;
+}
+
+p {
+    font-size: 20px;
+    margin: 28px auto;
+}
+
+form{
+    margin: 20px auto;
+}
+
+form input{
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+form button{
+    cursor: pointer;
+    width: 90px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #888888;
+    background-color: #888888;
+    color: white;
+}
+
+.img-conatiner{
+    width: auto;
+    margin: 30px;
+}
+
+.portrait{
+    width: 160px;
+}
+
+.message{
+    margin: 10px;
+    font-size: 18px;
+}
+
+footer{
+    background-color: rgb(86, 40, 211);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+footer p{
+    font-size: 18px;
+    color: white;
+    margin: 10px;
+}
